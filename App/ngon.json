@@ -1,0 +1,127 @@
+{
+  "version": 8,
+  "name": "Offline ngon plugin example",
+  "center": [
+    0,
+    0
+  ],
+  "zoom": 11,
+  "sources": {
+    "points": {
+      "type": "geojson",
+      "data": {
+        "type": "FeatureCollection",
+        "features": [
+          {
+            "type": "Feature",
+            "id": 0,
+            "properties": {
+              "shape": 0
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                0,
+                0.05
+              ]
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 1,
+            "properties": {
+              "shape": 1
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                0,
+                0
+              ]
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 2,
+            "properties": {
+              "shape": 2
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                0,
+                -0.05
+              ]
+            }
+          }
+        ]
+      }
+    }
+  },
+  "layers": [
+    {
+      "id": "background",
+      "type": "background",
+      "paint": {
+        "background-color": "#111827"
+      }
+    },
+    {
+      "id": "ngon-3",
+      "type": "ngon",
+      "source": "points",
+      "filter": [
+        "==",
+        "shape",
+        0
+      ],
+      "paint": {
+        "ngon-radius": 38,
+        "ngon-corners": 3,
+        "ngon-color": "#f97316",
+        "ngon-stroke-width": 2,
+        "ngon-stroke-color": "#ffffff",
+        "ngon-pitch-alignment": "viewport",
+        "ngon-pitch-scale": "viewport"
+      }
+    },
+    {
+      "id": "ngon-5",
+      "type": "ngon",
+      "source": "points",
+      "filter": [
+        "==",
+        "shape",
+        1
+      ],
+      "paint": {
+        "ngon-radius": 38,
+        "ngon-corners": 5,
+        "ngon-color": "#06b6d4",
+        "ngon-stroke-width": 2,
+        "ngon-stroke-color": "#ffffff",
+        "ngon-pitch-alignment": "viewport",
+        "ngon-pitch-scale": "viewport"
+      }
+    },
+    {
+      "id": "ngon-8",
+      "type": "ngon",
+      "source": "points",
+      "filter": [
+        "==",
+        "shape",
+        2
+      ],
+      "paint": {
+        "ngon-radius": 38,
+        "ngon-corners": 8,
+        "ngon-color": "#ec4899",
+        "ngon-stroke-width": 2,
+        "ngon-stroke-color": "#ffffff",
+        "ngon-pitch-alignment": "viewport",
+        "ngon-pitch-scale": "viewport"
+      }
+    }
+  ]
+}

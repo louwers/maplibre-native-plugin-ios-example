@@ -1,0 +1,6 @@
+Frameworks/*
+!Frameworks/.gitkeep
+build/
+*.xcuserstate
+xcuserdata/
+.DS_Store
