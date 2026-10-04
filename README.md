@@ -72,7 +72,8 @@ simulator running iOS 26.4:
 - Built the complete release XCFramework with plugins, Metal, ThinLTO, and stripping.
 - Verified the public plugin header and registration export for device arm64
   and simulator arm64/x86_64.
-- Built the app using only that XCFramework and the copied plugin source.
+- Built the app for both an iOS device (Release, without signing) and the
+  simulator, using only that XCFramework and the copied plugin source.
 - Passed `testPluginRegistersAndRendersAllThreePolygons`: registration, completed
   map rendering, and visible pixels from all three polygon colors.
 
