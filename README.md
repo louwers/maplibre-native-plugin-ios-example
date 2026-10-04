@@ -8,8 +8,9 @@ on a dark background. It needs no network connection or API key.
 ## Build the XCFramework
 
 Use Xcode and Bazelisk on macOS. The native checkout must include the
-`MapLibre.dynamic.plugins` target and the plugin entry-point retention fix on
-`codex/ios-plugin-distribution`. Initialize its submodules before building:
+`MapLibre.dynamic.plugins` target, plugin entry-point retention, and Darwin
+style-layer wrapper fixes on `codex/ios-plugin-distribution` (tested at commit
+`bfd26e3feabd2227a32c634814396539979a7110`). Initialize its submodules before building:
 
 ```sh
 git -C /path/to/maplibre-native submodule update --init --recursive
@@ -65,9 +66,17 @@ gem and run `ruby scripts/generate-project.rb`.
 
 ## Validation status
 
-The copied plugin compiles for device arm64 and simulator arm64/x86_64 with
-Xcode 26.4 against the native checkout's public plugin header. The Swift UI test
-type-checks, and project file and script validation pass. The complete XCFramework build and simulator UI test have
-not run successfully: the current execution session blocks Bazel's local server
-and CoreSimulator services, and `xcodebuild -list` aborts before loading the
-project. End-to-end rendering remains unverified until those tools can run.
+Verified with Xcode 27.0 (27A266a), the iOS 27.0 SDK, and an iPhone 17 Pro
+simulator running iOS 26.4:
+
+- Built the complete release XCFramework with plugins, Metal, ThinLTO, and stripping.
+- Verified the public plugin header and registration export for device arm64
+  and simulator arm64/x86_64.
+- Built the app using only that XCFramework and the copied plugin source.
+- Passed `testPluginRegistersAndRendersAllThreePolygons`: registration, completed
+  map rendering, and visible pixels from all three polygon colors.
+
+The SDK also wraps runtime plugin layers for the Objective-C style interface,
+so accessibility can enumerate the map's layers without a nil-layer exception.
+
+![The simulator app rendering an orange triangle, cyan pentagon, and pink octagon](docs/ngon-simulator.png)

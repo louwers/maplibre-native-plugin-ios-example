@@ -1,5 +1,5 @@
-@import UIKit;
-@import MapLibreWithPlugins;
+#import <UIKit/UIKit.h>
+#import <MapLibreWithPlugins/MapLibreWithPlugins.h>
 #include "ngon_layer.hpp"
 
 @interface NgonViewController : UIViewController <MLNMapViewDelegate>
@@ -47,7 +47,7 @@
 
     NSURL *styleURL = [NSBundle.mainBundle URLForResource:@"ngon" withExtension:@"json"];
     NSAssert(styleURL != nil, @"Missing bundled ngon style");
-    MLNMapView *map = [[MLNMapView alloc] initWithFrame:CGRectZero styleURL:styleURL];
+    MLNMapView *map = [[MLNMapView alloc] initWithFrame:self.view.bounds styleURL:styleURL];
     map.delegate = self;
     map.translatesAutoresizingMaskIntoConstraints = NO;
     [map setCenterCoordinate:CLLocationCoordinate2DMake(0, 0) zoomLevel:11 animated:NO];
@@ -61,7 +61,9 @@
 }
 
 - (void)mapViewDidFinishRenderingMap:(MLNMapView *)mapView fullyRendered:(BOOL)fullyRendered {
-    if (fullyRendered) self.renderLabel.text = @"Map rendered";
+    if (fullyRendered) {
+        self.renderLabel.text = @"Map rendered";
+    }
 }
 
 - (void)mapViewDidFailLoadingMap:(MLNMapView *)mapView withError:(NSError *)error {

@@ -20,8 +20,10 @@ frameworks = project.main_group.new_group('Frameworks', 'Frameworks')
 framework = frameworks.new_file('MapLibreWithPlugins.xcframework')
 framework.last_known_file_type = 'wrapper.xcframework'
 app.frameworks_build_phase.add_file_reference(framework)
-ui_kit = project.frameworks_group.new_file('System/Library/Frameworks/UIKit.framework', :sdk_root)
-app.frameworks_build_phase.add_file_reference(ui_kit)
+['UIKit', 'CoreGraphics', 'CoreLocation'].each do |name|
+  framework_ref = project.frameworks_group.new_file("System/Library/Frameworks/#{name}.framework", :sdk_root)
+  app.frameworks_build_phase.add_file_reference(framework_ref)
+end
 # Use the selected SDK instead of the generator gem's default SDK version.
 project.files.select { |file| file.path&.end_with?('Foundation.framework') }.each do |file|
   file.path = 'System/Library/Frameworks/Foundation.framework'

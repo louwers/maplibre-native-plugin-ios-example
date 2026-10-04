@@ -15,7 +15,12 @@ options=(
 )
 target=//platform/ios:MapLibre.dynamic.plugins
 bazel build "${options[@]}" --output_groups=+dsyms "$target"
-archive="$(bazel info execution_root)/$(bazel cquery "${options[@]}" --output=files "$target")"
+archive_relative="$(bazel cquery "${options[@]}" --output=files "$target" | awk '/\.xcframework\.zip$/')"
+if [[ -z "$archive_relative" || "$archive_relative" == *$'\n'* ]]; then
+    echo "Expected one XCFramework archive, got: $archive_relative" >&2
+    exit 1
+fi
+archive="$(bazel info execution_root)/$archive_relative"
 staging="$(mktemp -d)"
 trap 'rm -rf "$staging"' EXIT
 unzip -q "$archive" -d "$staging"

@@ -8,9 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		48BD3FB6BD8F485F35C93F28 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F96E3E8BC2B1C810896E2AA4 /* Foundation.framework */; };
+		52D3746BE728B06CA9577242 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BC8F6C8A503B86EE2C5A92D /* CoreLocation.framework */; };
 		638D6F73E439C4B3E572CA54 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = D1637A8D446C77A1C8FF896A /* main.mm */; };
 		6480EB48258460C8CBEDDCD5 /* ngon_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5802B2B955B4CCA8703BB895 /* ngon_layer.cpp */; };
 		6DA052FA43E4D7E3AFAFFC52 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F96E3E8BC2B1C810896E2AA4 /* Foundation.framework */; };
+		75AF060D6B9F10EF4FA0A1F1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C0D2670CBA43D2A106F8A6 /* CoreGraphics.framework */; };
 		969064C187C956C65EFB81BD /* MapLibreWithPlugins.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7F515E1AEA2D6705823974 /* MapLibreWithPlugins.xcframework */; };
 		D1D64079D52697B15CC72C95 /* MapLibreWithPlugins.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE7F515E1AEA2D6705823974 /* MapLibreWithPlugins.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D6FBA491FCD76D822A9BE8D7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53523A0B6676F58AEA060B73 /* UIKit.framework */; };
@@ -43,6 +45,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0BC8F6C8A503B86EE2C5A92D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		183263E90D931D5C14EB55E8 /* ngon_shader_sources.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = ngon_shader_sources.hpp; path = generated/ngon_shader_sources.hpp; sourceTree = "<group>"; };
 		38CBDB0C4BA9FD57E4DBA6DA /* ngon_layer.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = ngon_layer.hpp; path = shared/include/ngon_layer.hpp; sourceTree = "<group>"; };
 		53523A0B6676F58AEA060B73 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -53,6 +56,7 @@
 		AF25F3C7AD7FE457F6F1B491 /* NgonExampleTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NgonExampleTests.swift; sourceTree = "<group>"; };
 		CE7F515E1AEA2D6705823974 /* MapLibreWithPlugins.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; path = MapLibreWithPlugins.xcframework; sourceTree = "<group>"; };
 		D1637A8D446C77A1C8FF896A /* main.mm */ = {isa = PBXFileReference; includeInIndex = 1; path = main.mm; sourceTree = "<group>"; };
+		F7C0D2670CBA43D2A106F8A6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		F96E3E8BC2B1C810896E2AA4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -64,6 +68,8 @@
 				6DA052FA43E4D7E3AFAFFC52 /* Foundation.framework in Frameworks */,
 				969064C187C956C65EFB81BD /* MapLibreWithPlugins.xcframework in Frameworks */,
 				D6FBA491FCD76D822A9BE8D7 /* UIKit.framework in Frameworks */,
+				75AF060D6B9F10EF4FA0A1F1 /* CoreGraphics.framework in Frameworks */,
+				52D3746BE728B06CA9577242 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +137,8 @@
 			children = (
 				35B0B6FAAAC383E3671FFC6A /* iOS */,
 				53523A0B6676F58AEA060B73 /* UIKit.framework */,
+				F7C0D2670CBA43D2A106F8A6 /* CoreGraphics.framework */,
+				0BC8F6C8A503B86EE2C5A92D /* CoreLocation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
