@@ -8,6 +8,8 @@ The bundled style is copied from the native plugin example app at
 on a light background, demonstrating corners, strokes, opacity, blur, size,
 and rotation. Running the app needs no network connection or API key.
 
+<img src="docs/ngon-simulator.png" alt="iOS simulator rendering the native example polygon grid" width="320" />
+
 ## Swift package dependency
 
 The app uses the `MapLibreWithPlugins` product from the
@@ -77,5 +79,3 @@ simulator running iOS 26.4:
 
 The SDK also wraps runtime plugin layers for the Objective-C style interface,
 so accessibility can enumerate the map's layers without a nil-layer exception.
-
-![The simulator app rendering the native example polygon grid](docs/ngon-simulator.png)
