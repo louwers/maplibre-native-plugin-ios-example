@@ -2,8 +2,11 @@
 
 A small UIKit app that builds the copied ngon C++ plugin and registers it with
 the public C API in the published `MapLibreWithPlugins` Swift package.
-The bundled style draws an orange triangle, a cyan pentagon, and a pink octagon
-on a dark background. Running the app needs no network connection or API key.
+The bundled style is copied from the native plugin example app at
+`plugins/android/app/src/main/assets/ngon.json` in `maplibre/maplibre-native`
+(commit `043df51b2dfebfd8a1f0b20d355ab23238ae31bb`). It draws a grid of 24 polygons
+on a light background, demonstrating corners, strokes, opacity, blur, size,
+and rotation. Running the app needs no network connection or API key.
 
 ## Swift package dependency
 
@@ -22,8 +25,8 @@ initial package download. No native SDK checkout or Bazel build is required.
 Open `NgonExample.xcodeproj`, select the `NgonExample` scheme and an iOS simulator,
 wait for package resolution, then Run. For a device, choose your development
 team in Signing & Capabilities.
-The app reports `Plugin registered` followed by `Map rendered`; all three
-polygons should be visible.
+The map fills the screen with the polygon grid. Registration and loading errors
+are reported in the Xcode console.
 
 The Xcode project compiles `Ngon/shared/cpp/ngon_layer.cpp` directly into the app
 and links the `MapLibreWithPlugins` package product. `App/main.mm` calls
@@ -39,8 +42,9 @@ xcrun simctl list devices available
 ./scripts/test.sh SIMULATOR_UDID
 ```
 
-The UI test checks registration, waits for rendering, and requires pixels from
-each of the three polygons. It retains a screenshot in `build/*.xcresult`.
+The UI test waits for visible pixels from all eight polygon colors, verifying
+plugin registration and rendering without status labels in the interface.
+It retains a screenshot in `build/*.xcresult`.
 The test fails if registration succeeds but the custom layer does not draw.
 
 ## Copied plugin source
@@ -68,10 +72,10 @@ simulator running iOS 26.4:
   [`7.0.0-pre0`](https://github.com/maplibre/maplibre-gl-native-distribution/releases/tag/7.0.0-pre0)
   through Swift Package Manager using a fresh build directory.
 - Built the app for the simulator and an iOS device (Release, without signing).
-- Passed `testPluginRegistersAndRendersAllThreePolygons`: registration, completed
-  map rendering, and visible pixels from all three polygon colors.
+- Passed `testPluginRendersNativeExampleStyle`: visible pixels from all eight
+  polygon colors using the native example style.
 
 The SDK also wraps runtime plugin layers for the Objective-C style interface,
 so accessibility can enumerate the map's layers without a nil-layer exception.
 
-![The simulator app rendering an orange triangle, cyan pentagon, and pink octagon](docs/ngon-simulator.png)
+![The simulator app rendering the native example polygon grid](docs/ngon-simulator.png)

@@ -1,24 +1,35 @@
 import XCTest
 
 final class NgonExampleTests: XCTestCase {
-    func testPluginRegistersAndRendersAllThreePolygons() throws {
+    private let colors = [
+        (231, 111, 81), (233, 196, 106), (42, 157, 143), (69, 123, 157),
+        (144, 103, 198), (239, 71, 111), (17, 138, 178), (6, 214, 160)
+    ]
+
+    func testPluginRendersNativeExampleStyle() throws {
         let app = XCUIApplication()
         app.launch()
-        let registered = app.staticTexts["registration-status"]
-        XCTAssertTrue(registered.waitForExistence(timeout: 20))
-        XCTAssertEqual(registered.label, "Plugin registered")
-        let rendered = app.staticTexts["render-status"]
-        let ready = NSPredicate(format: "label == %@", "Map rendered")
-        expectation(for: ready, evaluatedWith: rendered)
+        // Visible polygon colors prove that registration and custom rendering work
+        // without adding status text or test-only controls to the app.
+        let rendered = NSPredicate { _, _ in
+            guard let counts = try? self.polygonPixelCounts(in: app.screenshot()) else { return false }
+            return counts.allSatisfy { $0 > 200 }
+        }
+        expectation(for: rendered, evaluatedWith: nil)
         waitForExpectations(timeout: 30)
 
-        // A successful style load alone cannot prove that a custom layer drew.
-        // Require pixels from every polygon; no other UI uses these colors.
         let screenshot = app.screenshot()
         let attachment = XCTAttachment(screenshot: screenshot)
         attachment.name = "ngon polygons from published MapLibreWithPlugins package"
         attachment.lifetime = .keepAlways
         add(attachment)
+        let counts = try polygonPixelCounts(in: screenshot)
+        for (color, count) in zip(colors, counts) {
+            XCTAssertGreaterThan(count, 200, "Missing polygon color RGB\(color)")
+        }
+    }
+
+    private func polygonPixelCounts(in screenshot: XCUIScreenshot) throws -> [Int] {
         let image = try XCTUnwrap(screenshot.image.cgImage)
         let width = image.width
         let height = image.height
@@ -31,8 +42,7 @@ final class NgonExampleTests: XCTestCase {
             ))
             context.draw(image, in: CGRect(x: 0, y: 0, width: width, height: height))
         }
-        let colors = [(249, 115, 22), (6, 182, 212), (236, 72, 153)]
-        for (red, green, blue) in colors {
+        return colors.map { red, green, blue in
             var count = 0
             for offset in stride(from: 0, to: pixels.count, by: 4) {
                 if abs(Int(pixels[offset]) - red) < 15,
@@ -41,7 +51,7 @@ final class NgonExampleTests: XCTestCase {
                     count += 1
                 }
             }
-            XCTAssertGreaterThan(count, 200, "Missing polygon color RGB(\(red), \(green), \(blue))")
+            return count
         }
     }
 }
