@@ -76,6 +76,9 @@ simulator running iOS 26.4:
   simulator, using only that XCFramework and the copied plugin source.
 - Passed `testPluginRegistersAndRendersAllThreePolygons`: registration, completed
   map rendering, and visible pixels from all three polygon colors.
+- Passed the same test against the CI-built release artifact, then again through
+  Swift Package Manager using the published `MapLibreWithPlugins` product at
+  [`7.0.0-pre0`](https://github.com/maplibre/maplibre-gl-native-distribution/releases/tag/7.0.0-pre0).
 
 The SDK also wraps runtime plugin layers for the Objective-C style interface,
 so accessibility can enumerate the map's layers without a nil-layer exception.
