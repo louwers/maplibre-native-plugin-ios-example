@@ -1,5 +1,4 @@
-Frameworks/*
-!Frameworks/.gitkeep
+Frameworks/
 build/
 *.xcuserstate
 xcuserdata/

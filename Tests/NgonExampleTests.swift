@@ -16,7 +16,7 @@ final class NgonExampleTests: XCTestCase {
         // Require pixels from every polygon; no other UI uses these colors.
         let screenshot = app.screenshot()
         let attachment = XCTAttachment(screenshot: screenshot)
-        attachment.name = "ngon polygons from local XCFramework"
+        attachment.name = "ngon polygons from published MapLibreWithPlugins package"
         attachment.lifetime = .keepAlways
         add(attachment)
         let image = try XCTUnwrap(screenshot.image.cgImage)

@@ -13,11 +13,10 @@
 		6480EB48258460C8CBEDDCD5 /* ngon_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5802B2B955B4CCA8703BB895 /* ngon_layer.cpp */; };
 		6DA052FA43E4D7E3AFAFFC52 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F96E3E8BC2B1C810896E2AA4 /* Foundation.framework */; };
 		75AF060D6B9F10EF4FA0A1F1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C0D2670CBA43D2A106F8A6 /* CoreGraphics.framework */; };
-		969064C187C956C65EFB81BD /* MapLibreWithPlugins.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7F515E1AEA2D6705823974 /* MapLibreWithPlugins.xcframework */; };
-		D1D64079D52697B15CC72C95 /* MapLibreWithPlugins.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE7F515E1AEA2D6705823974 /* MapLibreWithPlugins.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D6FBA491FCD76D822A9BE8D7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53523A0B6676F58AEA060B73 /* UIKit.framework */; };
 		D8FF47468A9130C07BDF769A /* NgonExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF25F3C7AD7FE457F6F1B491 /* NgonExampleTests.swift */; };
 		DC215751B84C4DBC2AFC3385 /* ngon.json in Resources */ = {isa = PBXBuildFile; fileRef = A0EE7ABA4ADBE7418DE87CA7 /* ngon.json */; };
+		DEE88DCAC0E0DA1D14CA91BA /* MapLibreWithPlugins in Frameworks */ = {isa = PBXBuildFile; productRef = DD65644FB9DB9A2CE262A2EF /* MapLibreWithPlugins */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,20 +29,6 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		48CA3EB4EC169DF0DE067DE5 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				D1D64079D52697B15CC72C95 /* MapLibreWithPlugins.xcframework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		0BC8F6C8A503B86EE2C5A92D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		183263E90D931D5C14EB55E8 /* ngon_shader_sources.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = ngon_shader_sources.hpp; path = generated/ngon_shader_sources.hpp; sourceTree = "<group>"; };
@@ -54,7 +39,6 @@
 		A0EE7ABA4ADBE7418DE87CA7 /* ngon.json */ = {isa = PBXFileReference; includeInIndex = 1; path = ngon.json; sourceTree = "<group>"; };
 		A85BBB678329DC5D5E8F680E /* NgonExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NgonExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF25F3C7AD7FE457F6F1B491 /* NgonExampleTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NgonExampleTests.swift; sourceTree = "<group>"; };
-		CE7F515E1AEA2D6705823974 /* MapLibreWithPlugins.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; path = MapLibreWithPlugins.xcframework; sourceTree = "<group>"; };
 		D1637A8D446C77A1C8FF896A /* main.mm */ = {isa = PBXFileReference; includeInIndex = 1; path = main.mm; sourceTree = "<group>"; };
 		F7C0D2670CBA43D2A106F8A6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		F96E3E8BC2B1C810896E2AA4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -66,10 +50,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				6DA052FA43E4D7E3AFAFFC52 /* Foundation.framework in Frameworks */,
-				969064C187C956C65EFB81BD /* MapLibreWithPlugins.xcframework in Frameworks */,
 				D6FBA491FCD76D822A9BE8D7 /* UIKit.framework in Frameworks */,
 				75AF060D6B9F10EF4FA0A1F1 /* CoreGraphics.framework in Frameworks */,
 				52D3746BE728B06CA9577242 /* CoreLocation.framework in Frameworks */,
+				DEE88DCAC0E0DA1D14CA91BA /* MapLibreWithPlugins in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,15 +76,6 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		38874DD79799AD05ED17D01B /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				CE7F515E1AEA2D6705823974 /* MapLibreWithPlugins.xcframework */,
-			);
-			name = Frameworks;
-			path = Frameworks;
-			sourceTree = "<group>";
-		};
 		4C4E9798107411E45D0E4ED2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -118,7 +93,6 @@
 				A4D4ADBF05318DE264402458 /* App */,
 				CF44B1000F6C72F50B793D36 /* Ngon */,
 				D524AEA0F1E87BFD9F0A0488 /* Tests */,
-				38874DD79799AD05ED17D01B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -191,13 +165,15 @@
 				ABE30701A914A51ED9D1F758 /* Sources */,
 				71442062CF2D81E78FE9CA51 /* Frameworks */,
 				D52BB919616A8F68776FA485 /* Resources */,
-				48CA3EB4EC169DF0DE067DE5 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = NgonExample;
+			packageProductDependencies = (
+				DD65644FB9DB9A2CE262A2EF /* MapLibreWithPlugins */,
+			);
 			productName = NgonExample;
 			productReference = A0277434129A5BE2930D1A0E /* NgonExample.app */;
 			productType = "com.apple.product-type.application";
@@ -221,6 +197,9 @@
 			);
 			mainGroup = 8B3E52EB1762BADE9CB1C24C;
 			minimizedProjectReferenceProxies = 0;
+			packageReferences = (
+				ACC5A99F5A8CEF47D4A45F94 /* XCRemoteSwiftPackageReference "maplibre-gl-native-distribution" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 4C4E9798107411E45D0E4ED2 /* Products */;
 			projectDirPath = "";
@@ -540,6 +519,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		ACC5A99F5A8CEF47D4A45F94 /* XCRemoteSwiftPackageReference "maplibre-gl-native-distribution" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/maplibre/maplibre-gl-native-distribution.git";
+			requirement = {
+				kind = exactVersion;
+				version = "7.0.0-pre0";
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DD65644FB9DB9A2CE262A2EF /* MapLibreWithPlugins */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ACC5A99F5A8CEF47D4A45F94 /* XCRemoteSwiftPackageReference "maplibre-gl-native-distribution" */;
+			productName = MapLibreWithPlugins;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B9D50C263192767F3DDE2AD3 /* Project object */;
 }

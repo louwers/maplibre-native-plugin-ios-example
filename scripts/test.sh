@@ -1,10 +1,6 @@
 #!/bin/bash
 set -euo pipefail
 cd "$(dirname "$0")/.."
-if [[ ! -d Frameworks/MapLibreWithPlugins.xcframework ]]; then
-    echo 'First run scripts/build-xcframework.sh /path/to/maplibre-native' >&2
-    exit 1
-fi
 if [[ $# != 1 ]]; then
     echo "Usage: $0 SIMULATOR_UDID (see: xcrun simctl list devices available)" >&2
     exit 2

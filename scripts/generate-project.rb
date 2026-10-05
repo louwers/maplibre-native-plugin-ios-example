@@ -16,10 +16,17 @@ plugin_group.new_file('shared/include/ngon_layer.hpp')
 plugin_group.new_file('generated/ngon_shader_sources.hpp')
 tests_group = project.main_group.new_group('Tests', 'Tests')
 tests.add_file_references([tests_group.new_file('NgonExampleTests.swift')])
-frameworks = project.main_group.new_group('Frameworks', 'Frameworks')
-framework = frameworks.new_file('MapLibreWithPlugins.xcframework')
-framework.last_known_file_type = 'wrapper.xcframework'
-app.frameworks_build_phase.add_file_reference(framework)
+package = project.new(Xcodeproj::Project::Object::XCRemoteSwiftPackageReference)
+package.repositoryURL = 'https://github.com/maplibre/maplibre-gl-native-distribution.git'
+package.requirement = { 'kind' => 'exactVersion', 'version' => '7.0.0-pre0' }
+project.root_object.package_references << package
+product = project.new(Xcodeproj::Project::Object::XCSwiftPackageProductDependency)
+product.package = package
+product.product_name = 'MapLibreWithPlugins'
+app.package_product_dependencies << product
+build_file = project.new(Xcodeproj::Project::Object::PBXBuildFile)
+build_file.product_ref = product
+app.frameworks_build_phase.files << build_file
 ['UIKit', 'CoreGraphics', 'CoreLocation'].each do |name|
   framework_ref = project.frameworks_group.new_file("System/Library/Frameworks/#{name}.framework", :sdk_root)
   app.frameworks_build_phase.add_file_reference(framework_ref)
@@ -29,10 +36,6 @@ project.files.select { |file| file.path&.end_with?('Foundation.framework') }.eac
   file.path = 'System/Library/Frameworks/Foundation.framework'
   file.source_tree = 'SDKROOT'
 end
-embed = app.new_copy_files_build_phase('Embed Frameworks')
-embed.dst_subfolder_spec = '10'
-embedded = embed.add_file_reference(framework)
-embedded.settings = { 'ATTRIBUTES' => ['CodeSignOnCopy', 'RemoveHeadersOnCopy'] }
 
 [app, tests].each do |target|
   target.build_configurations.each do |config|
