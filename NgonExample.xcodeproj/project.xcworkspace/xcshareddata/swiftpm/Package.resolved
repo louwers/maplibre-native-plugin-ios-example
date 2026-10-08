@@ -1,13 +1,13 @@
 {
-  "originHash" : "3410744460d892db4e6f53d7a7dd25e43531f11cf3e400f996006504360a6c0f",
+  "originHash" : "d826d2d6f40977ef9981f091e44c8bc270274a24ecd349044a57198961c4f68d",
   "pins" : [
     {
-      "identity" : "maplibre-gl-native-distribution",
+      "identity" : "maplibre-ios-with-plugin-api",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/maplibre/maplibre-gl-native-distribution.git",
+      "location" : "https://github.com/louwers/maplibre-ios-with-plugin-api.git",
       "state" : {
-        "revision" : "e261c2a267d5bcfcebac4238a302ae1f5a5abac9",
-        "version" : "7.0.0-pre0"
+        "revision" : "9e2c1e31ef65f8bb17e35e2e0d6fd783ef268baf",
+        "version" : "7.0.0-pre1"
       }
     }
   ],

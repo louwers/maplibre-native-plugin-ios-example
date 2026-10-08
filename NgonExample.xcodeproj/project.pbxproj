@@ -7,164 +7,166 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		48BD3FB6BD8F485F35C93F28 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F96E3E8BC2B1C810896E2AA4 /* Foundation.framework */; };
-		52D3746BE728B06CA9577242 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BC8F6C8A503B86EE2C5A92D /* CoreLocation.framework */; };
-		638D6F73E439C4B3E572CA54 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = D1637A8D446C77A1C8FF896A /* main.mm */; };
-		6480EB48258460C8CBEDDCD5 /* ngon_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5802B2B955B4CCA8703BB895 /* ngon_layer.cpp */; };
-		6DA052FA43E4D7E3AFAFFC52 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F96E3E8BC2B1C810896E2AA4 /* Foundation.framework */; };
-		75AF060D6B9F10EF4FA0A1F1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C0D2670CBA43D2A106F8A6 /* CoreGraphics.framework */; };
-		D6FBA491FCD76D822A9BE8D7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53523A0B6676F58AEA060B73 /* UIKit.framework */; };
-		D8FF47468A9130C07BDF769A /* NgonExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF25F3C7AD7FE457F6F1B491 /* NgonExampleTests.swift */; };
-		DC215751B84C4DBC2AFC3385 /* ngon.json in Resources */ = {isa = PBXBuildFile; fileRef = A0EE7ABA4ADBE7418DE87CA7 /* ngon.json */; };
-		DEE88DCAC0E0DA1D14CA91BA /* MapLibreWithPlugins in Frameworks */ = {isa = PBXBuildFile; productRef = DD65644FB9DB9A2CE262A2EF /* MapLibreWithPlugins */; };
+		0E54B173013687234FF44E63 /* MapLibre in Frameworks */ = {isa = PBXBuildFile; productRef = 42F3393C8D2F7BB77EB97E8A /* MapLibre */; };
+		26719212A839B882BC9646F7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 061B7F0AB69B61509F5C7CF9 /* Foundation.framework */; };
+		3CAD59A879022ED9061C3275 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 061B7F0AB69B61509F5C7CF9 /* Foundation.framework */; };
+		4FDC69530560E422651C20A0 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC1E7D31EF37406089A68F20 /* CoreLocation.framework */; };
+		5491FE9C908FC166E4AEB16E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD68AE8D11ABEBE6CBA26E5C /* UIKit.framework */; };
+		92A84375098C8B6151963358 /* ngon.json in Resources */ = {isa = PBXBuildFile; fileRef = 024C85883BCC2D86E47D8EEA /* ngon.json */; };
+		9A1E0C17BC884E1921F7443B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D075206CA329FF7BFED6F4A1 /* CoreGraphics.framework */; };
+		A7F07CB02BE58A3BC59E75A1 /* NgonExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71A7DF1AEFCBBA117CF3F38 /* NgonExampleTests.swift */; };
+		B4CB9850D3FFE06FF95FEC65 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = F71C3A47F236DF61AFD6361B /* main.mm */; };
+		BFB3603495BE3CE2307CAFDF /* MapLibrePluginApi in Frameworks */ = {isa = PBXBuildFile; productRef = EB867587DADAAF454A542B50 /* MapLibrePluginApi */; };
+		FBCE7E05BE2902D21947150B /* ngon_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B938C8170C4B2C43B189FE6 /* ngon_layer.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		D777672F8BF5F2947234AEFB /* PBXContainerItemProxy */ = {
+		DCF799927F6CD2A0B5B029ED /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = B9D50C263192767F3DDE2AD3 /* Project object */;
+			containerPortal = 465E0F02372A14F0530AF450 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = F2059B9D4DE45D2543B02CA5;
+			remoteGlobalIDString = D0E151A18AFE613C83EF5CA2;
 			remoteInfo = NgonExample;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0BC8F6C8A503B86EE2C5A92D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		183263E90D931D5C14EB55E8 /* ngon_shader_sources.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = ngon_shader_sources.hpp; path = generated/ngon_shader_sources.hpp; sourceTree = "<group>"; };
-		38CBDB0C4BA9FD57E4DBA6DA /* ngon_layer.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = ngon_layer.hpp; path = shared/include/ngon_layer.hpp; sourceTree = "<group>"; };
-		53523A0B6676F58AEA060B73 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		5802B2B955B4CCA8703BB895 /* ngon_layer.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = ngon_layer.cpp; path = shared/cpp/ngon_layer.cpp; sourceTree = "<group>"; };
-		A0277434129A5BE2930D1A0E /* NgonExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NgonExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A0EE7ABA4ADBE7418DE87CA7 /* ngon.json */ = {isa = PBXFileReference; includeInIndex = 1; path = ngon.json; sourceTree = "<group>"; };
-		A85BBB678329DC5D5E8F680E /* NgonExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NgonExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AF25F3C7AD7FE457F6F1B491 /* NgonExampleTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NgonExampleTests.swift; sourceTree = "<group>"; };
-		D1637A8D446C77A1C8FF896A /* main.mm */ = {isa = PBXFileReference; includeInIndex = 1; path = main.mm; sourceTree = "<group>"; };
-		F7C0D2670CBA43D2A106F8A6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		F96E3E8BC2B1C810896E2AA4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		024C85883BCC2D86E47D8EEA /* ngon.json */ = {isa = PBXFileReference; includeInIndex = 1; path = ngon.json; sourceTree = "<group>"; };
+		061B7F0AB69B61509F5C7CF9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		294C2EFB6E3A1BBB86978407 /* ngon_layer.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = ngon_layer.hpp; path = shared/include/ngon_layer.hpp; sourceTree = "<group>"; };
+		3B938C8170C4B2C43B189FE6 /* ngon_layer.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = ngon_layer.cpp; path = shared/cpp/ngon_layer.cpp; sourceTree = "<group>"; };
+		775EB4792E9606C2A20358DB /* NgonExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NgonExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC1E7D31EF37406089A68F20 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		B5D27784AA5934889D3A067C /* ngon_shader_sources.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = ngon_shader_sources.hpp; path = generated/ngon_shader_sources.hpp; sourceTree = "<group>"; };
+		CD4CC0D26E5E9BB13643AC02 /* NgonExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NgonExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D075206CA329FF7BFED6F4A1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DD68AE8D11ABEBE6CBA26E5C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E71A7DF1AEFCBBA117CF3F38 /* NgonExampleTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NgonExampleTests.swift; sourceTree = "<group>"; };
+		F71C3A47F236DF61AFD6361B /* main.mm */ = {isa = PBXFileReference; includeInIndex = 1; path = main.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		71442062CF2D81E78FE9CA51 /* Frameworks */ = {
+		4112B4814320DEF539323660 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6DA052FA43E4D7E3AFAFFC52 /* Foundation.framework in Frameworks */,
-				D6FBA491FCD76D822A9BE8D7 /* UIKit.framework in Frameworks */,
-				75AF060D6B9F10EF4FA0A1F1 /* CoreGraphics.framework in Frameworks */,
-				52D3746BE728B06CA9577242 /* CoreLocation.framework in Frameworks */,
-				DEE88DCAC0E0DA1D14CA91BA /* MapLibreWithPlugins in Frameworks */,
+				26719212A839B882BC9646F7 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		801A6DF190A6D6084E3A2C41 /* Frameworks */ = {
+		46127119BFA93B24DA13F730 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48BD3FB6BD8F485F35C93F28 /* Foundation.framework in Frameworks */,
+				3CAD59A879022ED9061C3275 /* Foundation.framework in Frameworks */,
+				0E54B173013687234FF44E63 /* MapLibre in Frameworks */,
+				BFB3603495BE3CE2307CAFDF /* MapLibrePluginApi in Frameworks */,
+				5491FE9C908FC166E4AEB16E /* UIKit.framework in Frameworks */,
+				9A1E0C17BC884E1921F7443B /* CoreGraphics.framework in Frameworks */,
+				4FDC69530560E422651C20A0 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		35B0B6FAAAC383E3671FFC6A /* iOS */ = {
+		437402A2B6B76DB668D8AA48 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F96E3E8BC2B1C810896E2AA4 /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		4C4E9798107411E45D0E4ED2 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				A0277434129A5BE2930D1A0E /* NgonExample.app */,
-				A85BBB678329DC5D5E8F680E /* NgonExampleTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		8B3E52EB1762BADE9CB1C24C = {
-			isa = PBXGroup;
-			children = (
-				4C4E9798107411E45D0E4ED2 /* Products */,
-				B6D7FACE5E42A9F11034EF10 /* Frameworks */,
-				A4D4ADBF05318DE264402458 /* App */,
-				CF44B1000F6C72F50B793D36 /* Ngon */,
-				D524AEA0F1E87BFD9F0A0488 /* Tests */,
-			);
-			sourceTree = "<group>";
-		};
-		A4D4ADBF05318DE264402458 /* App */ = {
-			isa = PBXGroup;
-			children = (
-				D1637A8D446C77A1C8FF896A /* main.mm */,
-				A0EE7ABA4ADBE7418DE87CA7 /* ngon.json */,
-			);
-			name = App;
-			path = App;
-			sourceTree = "<group>";
-		};
-		B6D7FACE5E42A9F11034EF10 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				35B0B6FAAAC383E3671FFC6A /* iOS */,
-				53523A0B6676F58AEA060B73 /* UIKit.framework */,
-				F7C0D2670CBA43D2A106F8A6 /* CoreGraphics.framework */,
-				0BC8F6C8A503B86EE2C5A92D /* CoreLocation.framework */,
+				51A7CE4F4C93668696CA47FF /* iOS */,
+				DD68AE8D11ABEBE6CBA26E5C /* UIKit.framework */,
+				D075206CA329FF7BFED6F4A1 /* CoreGraphics.framework */,
+				AC1E7D31EF37406089A68F20 /* CoreLocation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		CF44B1000F6C72F50B793D36 /* Ngon */ = {
+		47336D5EF27B7F3348ADBD2B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5802B2B955B4CCA8703BB895 /* ngon_layer.cpp */,
-				38CBDB0C4BA9FD57E4DBA6DA /* ngon_layer.hpp */,
-				183263E90D931D5C14EB55E8 /* ngon_shader_sources.hpp */,
+				775EB4792E9606C2A20358DB /* NgonExample.app */,
+				CD4CC0D26E5E9BB13643AC02 /* NgonExampleTests.xctest */,
 			);
-			name = Ngon;
-			path = Ngon;
+			name = Products;
 			sourceTree = "<group>";
 		};
-		D524AEA0F1E87BFD9F0A0488 /* Tests */ = {
+		51A7CE4F4C93668696CA47FF /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				AF25F3C7AD7FE457F6F1B491 /* NgonExampleTests.swift */,
+				061B7F0AB69B61509F5C7CF9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		8238929AA6022194629A4468 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				E71A7DF1AEFCBBA117CF3F38 /* NgonExampleTests.swift */,
 			);
 			name = Tests;
 			path = Tests;
 			sourceTree = "<group>";
 		};
+		96F23B58865E84BD6565A3DF = {
+			isa = PBXGroup;
+			children = (
+				47336D5EF27B7F3348ADBD2B /* Products */,
+				437402A2B6B76DB668D8AA48 /* Frameworks */,
+				A1C2AD36EF9C5917F3899AC1 /* App */,
+				EF1ADA8A0FD92A5CBBCBB03E /* Ngon */,
+				8238929AA6022194629A4468 /* Tests */,
+			);
+			sourceTree = "<group>";
+		};
+		A1C2AD36EF9C5917F3899AC1 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				F71C3A47F236DF61AFD6361B /* main.mm */,
+				024C85883BCC2D86E47D8EEA /* ngon.json */,
+			);
+			name = App;
+			path = App;
+			sourceTree = "<group>";
+		};
+		EF1ADA8A0FD92A5CBBCBB03E /* Ngon */ = {
+			isa = PBXGroup;
+			children = (
+				3B938C8170C4B2C43B189FE6 /* ngon_layer.cpp */,
+				294C2EFB6E3A1BBB86978407 /* ngon_layer.hpp */,
+				B5D27784AA5934889D3A067C /* ngon_shader_sources.hpp */,
+			);
+			name = Ngon;
+			path = Ngon;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A8393E4971340614EF2C2300 /* NgonExampleTests */ = {
+		41833D465C25ABCC180B8792 /* NgonExampleTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F2795F9564FAA989EF701444 /* Build configuration list for PBXNativeTarget "NgonExampleTests" */;
+			buildConfigurationList = 36AD774E9DF94DAEFCA4D66F /* Build configuration list for PBXNativeTarget "NgonExampleTests" */;
 			buildPhases = (
-				6725854859820F34F88D9D62 /* Sources */,
-				801A6DF190A6D6084E3A2C41 /* Frameworks */,
-				857581CCCDFF5CE7646EC736 /* Resources */,
+				BAC529906AF163E964D62E89 /* Sources */,
+				4112B4814320DEF539323660 /* Frameworks */,
+				2B7ACF34FAC2FA40B5C115B2 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				85406C9D1438D189F8704B88 /* PBXTargetDependency */,
+				63A8740133F7FB136D7925CB /* PBXTargetDependency */,
 			);
 			name = NgonExampleTests;
 			productName = NgonExampleTests;
-			productReference = A85BBB678329DC5D5E8F680E /* NgonExampleTests.xctest */;
+			productReference = CD4CC0D26E5E9BB13643AC02 /* NgonExampleTests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
-		F2059B9D4DE45D2543B02CA5 /* NgonExample */ = {
+		D0E151A18AFE613C83EF5CA2 /* NgonExample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 28ABD64F3326F415EFA84129 /* Build configuration list for PBXNativeTarget "NgonExample" */;
+			buildConfigurationList = E364B477F9CC3B2C1BA6AA81 /* Build configuration list for PBXNativeTarget "NgonExample" */;
 			buildPhases = (
-				ABE30701A914A51ED9D1F758 /* Sources */,
-				71442062CF2D81E78FE9CA51 /* Frameworks */,
-				D52BB919616A8F68776FA485 /* Resources */,
+				573E388D70FC7770BBE17AFD /* Sources */,
+				46127119BFA93B24DA13F730 /* Frameworks */,
+				98849E37D0525EB58B924502 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -172,22 +174,23 @@
 			);
 			name = NgonExample;
 			packageProductDependencies = (
-				DD65644FB9DB9A2CE262A2EF /* MapLibreWithPlugins */,
+				42F3393C8D2F7BB77EB97E8A /* MapLibre */,
+				EB867587DADAAF454A542B50 /* MapLibrePluginApi */,
 			);
 			productName = NgonExample;
-			productReference = A0277434129A5BE2930D1A0E /* NgonExample.app */;
+			productReference = 775EB4792E9606C2A20358DB /* NgonExample.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		B9D50C263192767F3DDE2AD3 /* Project object */ = {
+		465E0F02372A14F0530AF450 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1600;
 				LastUpgradeCheck = 1600;
 			};
-			buildConfigurationList = 763AD409D7CF0BDE1BE0C29D /* Build configuration list for PBXProject "NgonExample" */;
+			buildConfigurationList = 0766F7DE8C0A4B506FA00D22 /* Build configuration list for PBXProject "NgonExample" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -195,71 +198,148 @@
 				en,
 				Base,
 			);
-			mainGroup = 8B3E52EB1762BADE9CB1C24C;
+			mainGroup = 96F23B58865E84BD6565A3DF;
 			minimizedProjectReferenceProxies = 0;
 			packageReferences = (
-				ACC5A99F5A8CEF47D4A45F94 /* XCRemoteSwiftPackageReference "maplibre-gl-native-distribution" */,
+				BCBEFF67C45E13469D3B4CB0 /* XCRemoteSwiftPackageReference "maplibre-ios-with-plugin-api" */,
 			);
-			preferredProjectObjectVersion = 77;
-			productRefGroup = 4C4E9798107411E45D0E4ED2 /* Products */;
+			preferredProjectObjectVersion = 100;
+			productRefGroup = 47336D5EF27B7F3348ADBD2B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F2059B9D4DE45D2543B02CA5 /* NgonExample */,
-				A8393E4971340614EF2C2300 /* NgonExampleTests */,
+				D0E151A18AFE613C83EF5CA2 /* NgonExample */,
+				41833D465C25ABCC180B8792 /* NgonExampleTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		857581CCCDFF5CE7646EC736 /* Resources */ = {
+		2B7ACF34FAC2FA40B5C115B2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D52BB919616A8F68776FA485 /* Resources */ = {
+		98849E37D0525EB58B924502 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC215751B84C4DBC2AFC3385 /* ngon.json in Resources */,
+				92A84375098C8B6151963358 /* ngon.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		6725854859820F34F88D9D62 /* Sources */ = {
+		573E388D70FC7770BBE17AFD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8FF47468A9130C07BDF769A /* NgonExampleTests.swift in Sources */,
+				B4CB9850D3FFE06FF95FEC65 /* main.mm in Sources */,
+				FBCE7E05BE2902D21947150B /* ngon_layer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ABE30701A914A51ED9D1F758 /* Sources */ = {
+		BAC529906AF163E964D62E89 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				638D6F73E439C4B3E572CA54 /* main.mm in Sources */,
-				6480EB48258460C8CBEDDCD5 /* ngon_layer.cpp in Sources */,
+				A7F07CB02BE58A3BC59E75A1 /* NgonExampleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		85406C9D1438D189F8704B88 /* PBXTargetDependency */ = {
+		63A8740133F7FB136D7925CB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = NgonExample;
-			target = F2059B9D4DE45D2543B02CA5 /* NgonExample */;
-			targetProxy = D777672F8BF5F2947234AEFB /* PBXContainerItemProxy */;
+			target = D0E151A18AFE613C83EF5CA2 /* NgonExample */;
+			targetProxy = DCF799927F6CD2A0B5B029ED /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		008CEF9A8C347B600C06CD5B /* Debug */ = {
+		159915DB8CEF3BBB5FC2E8C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		1A6E818A1CBB47AF69DFC638 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.maplibre.NgonExampleTests;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NgonExample;
+			};
+			name = Debug;
+		};
+		59B4E2A0B59161DB9B4E0170 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -273,7 +353,6 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/Support",
 					"$(SRCROOT)/Ngon/shared/include",
 					"$(SRCROOT)/Ngon/generated",
 				);
@@ -292,7 +371,64 @@
 			};
 			name = Debug;
 		};
-		11CA885A191A29260E047A37 /* Debug */ = {
+		60A0ACAB807D4B4DFB83ED57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/Ngon/shared/include",
+					"$(SRCROOT)/Ngon/generated",
+				);
+				INFOPLIST_KEY_CFBundleDisplayName = "Ngon Plugin";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.maplibre.NgonExample;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C999B2E16E3E650B9B6821A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.maplibre.NgonExampleTests;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NgonExample;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E6425F32BD744539DA4EE62C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -353,167 +489,32 @@
 			};
 			name = Debug;
 		};
-		84F43008AA26DBEC2C151E8A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = org.maplibre.NgonExampleTests;
-				SDKROOT = iphoneos;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = NgonExample;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		9A49F72F6A1D819DDD011714 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Support",
-					"$(SRCROOT)/Ngon/shared/include",
-					"$(SRCROOT)/Ngon/generated",
-				);
-				INFOPLIST_KEY_CFBundleDisplayName = "Ngon Plugin";
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = org.maplibre.NgonExample;
-				SDKROOT = iphoneos;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		A1EFA0A6619E9FE227422FA4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = org.maplibre.NgonExampleTests;
-				SDKROOT = iphoneos;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = NgonExample;
-			};
-			name = Debug;
-		};
-		F622EDC038DD9E9BA8B7488E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		28ABD64F3326F415EFA84129 /* Build configuration list for PBXNativeTarget "NgonExample" */ = {
+		0766F7DE8C0A4B506FA00D22 /* Build configuration list for PBXProject "NgonExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9A49F72F6A1D819DDD011714 /* Release */,
-				008CEF9A8C347B600C06CD5B /* Debug */,
+				E6425F32BD744539DA4EE62C /* Debug */,
+				159915DB8CEF3BBB5FC2E8C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		763AD409D7CF0BDE1BE0C29D /* Build configuration list for PBXProject "NgonExample" */ = {
+		36AD774E9DF94DAEFCA4D66F /* Build configuration list for PBXNativeTarget "NgonExampleTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				11CA885A191A29260E047A37 /* Debug */,
-				F622EDC038DD9E9BA8B7488E /* Release */,
+				C999B2E16E3E650B9B6821A1 /* Release */,
+				1A6E818A1CBB47AF69DFC638 /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F2795F9564FAA989EF701444 /* Build configuration list for PBXNativeTarget "NgonExampleTests" */ = {
+		E364B477F9CC3B2C1BA6AA81 /* Build configuration list for PBXNativeTarget "NgonExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				84F43008AA26DBEC2C151E8A /* Release */,
-				A1EFA0A6619E9FE227422FA4 /* Debug */,
+				60A0ACAB807D4B4DFB83ED57 /* Release */,
+				59B4E2A0B59161DB9B4E0170 /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -521,23 +522,28 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		ACC5A99F5A8CEF47D4A45F94 /* XCRemoteSwiftPackageReference "maplibre-gl-native-distribution" */ = {
+		BCBEFF67C45E13469D3B4CB0 /* XCRemoteSwiftPackageReference "maplibre-ios-with-plugin-api" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/maplibre/maplibre-gl-native-distribution.git";
+			repositoryURL = "https://github.com/louwers/maplibre-ios-with-plugin-api.git";
 			requirement = {
 				kind = exactVersion;
-				version = "7.0.0-pre0";
+				version = "7.0.0-pre1";
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		DD65644FB9DB9A2CE262A2EF /* MapLibreWithPlugins */ = {
+		42F3393C8D2F7BB77EB97E8A /* MapLibre */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = ACC5A99F5A8CEF47D4A45F94 /* XCRemoteSwiftPackageReference "maplibre-gl-native-distribution" */;
-			productName = MapLibreWithPlugins;
+			package = BCBEFF67C45E13469D3B4CB0 /* XCRemoteSwiftPackageReference "maplibre-ios-with-plugin-api" */;
+			productName = MapLibre;
+		};
+		EB867587DADAAF454A542B50 /* MapLibrePluginApi */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BCBEFF67C45E13469D3B4CB0 /* XCRemoteSwiftPackageReference "maplibre-ios-with-plugin-api" */;
+			productName = MapLibrePluginApi;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = B9D50C263192767F3DDE2AD3 /* Project object */;
+	rootObject = 465E0F02372A14F0530AF450 /* Project object */;
 }

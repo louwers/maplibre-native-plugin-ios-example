@@ -16,17 +16,27 @@ plugin_group.new_file('shared/include/ngon_layer.hpp')
 plugin_group.new_file('generated/ngon_shader_sources.hpp')
 tests_group = project.main_group.new_group('Tests', 'Tests')
 tests.add_file_references([tests_group.new_file('NgonExampleTests.swift')])
-package = project.new(Xcodeproj::Project::Object::XCRemoteSwiftPackageReference)
-package.repositoryURL = 'https://github.com/maplibre/maplibre-gl-native-distribution.git'
-package.requirement = { 'kind' => 'exactVersion', 'version' => '7.0.0-pre0' }
+# MAPLIBRE_IOS_PACKAGE_PATH selects a local checkout of the package, e.g. to test an unreleased XCFramework.
+local_package = ENV['MAPLIBRE_IOS_PACKAGE_PATH']
+if local_package
+  package = project.new(Xcodeproj::Project::Object::XCLocalSwiftPackageReference)
+  package.relative_path = local_package
+else
+  package = project.new(Xcodeproj::Project::Object::XCRemoteSwiftPackageReference)
+  package.repositoryURL = 'https://github.com/louwers/maplibre-ios-with-plugin-api.git'
+  package.requirement = { 'kind' => 'exactVersion', 'version' => '7.0.0-pre1' }
+end
 project.root_object.package_references << package
-product = project.new(Xcodeproj::Project::Object::XCSwiftPackageProductDependency)
-product.package = package
-product.product_name = 'MapLibreWithPlugins'
-app.package_product_dependencies << product
-build_file = project.new(Xcodeproj::Project::Object::PBXBuildFile)
-build_file.product_ref = product
-app.frameworks_build_phase.files << build_file
+# MapLibre is the plugin-enabled SDK; MapLibrePluginApi provides <mln/plugin/plugin_api.h> to the plugin.
+['MapLibre', 'MapLibrePluginApi'].each do |product_name|
+  product = project.new(Xcodeproj::Project::Object::XCSwiftPackageProductDependency)
+  product.package = package unless local_package
+  product.product_name = product_name
+  app.package_product_dependencies << product
+  build_file = project.new(Xcodeproj::Project::Object::PBXBuildFile)
+  build_file.product_ref = product
+  app.frameworks_build_phase.files << build_file
+end
 ['UIKit', 'CoreGraphics', 'CoreLocation'].each do |name|
   framework_ref = project.frameworks_group.new_file("System/Library/Frameworks/#{name}.framework", :sdk_root)
   app.frameworks_build_phase.add_file_reference(framework_ref)
@@ -58,7 +68,7 @@ end
 end
 app.build_configurations.each do |config|
   settings = config.build_settings
-  settings['HEADER_SEARCH_PATHS'] = ['$(inherited)', '$(SRCROOT)/Support', '$(SRCROOT)/Ngon/shared/include', '$(SRCROOT)/Ngon/generated']
+  settings['HEADER_SEARCH_PATHS'] = ['$(inherited)', '$(SRCROOT)/Ngon/shared/include', '$(SRCROOT)/Ngon/generated']
   settings['INFOPLIST_KEY_UILaunchScreen_Generation'] = 'YES'
   settings['INFOPLIST_KEY_CFBundleDisplayName'] = 'Ngon Plugin'
   settings['INFOPLIST_KEY_UISupportedInterfaceOrientations'] = 'UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight'
