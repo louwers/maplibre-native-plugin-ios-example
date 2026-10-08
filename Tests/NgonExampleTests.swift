@@ -20,7 +20,7 @@ final class NgonExampleTests: XCTestCase {
 
         let screenshot = app.screenshot()
         let attachment = XCTAttachment(screenshot: screenshot)
-        attachment.name = "ngon polygons from published MapLibreWithPlugins package"
+        attachment.name = "ngon polygons from the plugin-enabled MapLibre package"
         attachment.lifetime = .keepAlways
         add(attachment)
         let counts = try polygonPixelCounts(in: screenshot)

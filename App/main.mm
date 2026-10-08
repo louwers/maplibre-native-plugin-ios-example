@@ -1,5 +1,5 @@
 #import <UIKit/UIKit.h>
-#import <MapLibreWithPlugins/MapLibreWithPlugins.h>
+#import <MapLibre/MapLibre.h>
 #include "ngon_layer.hpp"
 
 @interface NgonViewController : UIViewController <MLNMapViewDelegate>
@@ -17,7 +17,7 @@
         NSLog(@"ngon registration failed (%d): %s", status, error);
         return;
     }
-    NSLog(@"ngon registered through MapLibreWithPlugins XCFramework");
+    NSLog(@"ngon registered through the plugin-enabled MapLibre XCFramework");
 
     NSURL *styleURL = [NSBundle.mainBundle URLForResource:@"ngon" withExtension:@"json"];
     NSAssert(styleURL != nil, @"Missing bundled ngon style");

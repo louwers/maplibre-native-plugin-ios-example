@@ -1,7 +1,7 @@
 # MapLibre Native iOS plugin example
 
 A small UIKit app that builds the copied ngon C++ plugin and registers it with
-the public C API in the published `MapLibreWithPlugins` Swift package.
+the public C API of the plugin-enabled MapLibre iOS SDK.
 The bundled style is copied from the native plugin example app at
 `plugins/android/app/src/main/assets/ngon.json` in `maplibre/maplibre-native`
 (commit `043df51b2dfebfd8a1f0b20d355ab23238ae31bb`). It draws a grid of 24 polygons
@@ -12,11 +12,14 @@ and rotation. Running the app needs no network connection or API key.
 
 ## Swift package dependency
 
-The app uses the `MapLibreWithPlugins` product from the
-[MapLibre package on Swift Package Index](https://swiftpackageindex.com/maplibre/maplibre-gl-native-distribution).
-The Xcode project pins the published prerelease **`7.0.0-pre0`** from
-`https://github.com/maplibre/maplibre-gl-native-distribution.git`.
-`Package.resolved` records its source revision.
+The app uses the [`louwers/maplibre-ios-with-plugin-api`](https://github.com/louwers/maplibre-ios-with-plugin-api)
+Swift package, pinned to the prerelease **`7.0.0-pre1`**. `Package.resolved` records its source revision.
+It links two products:
+
+- `MapLibre`: the plugin-enabled XCFramework. It is a drop-in replacement for the standard SDK, so
+  the app uses `#import <MapLibre/MapLibre.h>` as usual.
+- `MapLibrePluginApi`: the header-only C API, which lets the unchanged plugin source include
+  `<mln/plugin/plugin_api.h>`.
 
 Xcode downloads and embeds the published XCFramework through Swift Package
 Manager. Building requires Xcode on macOS and an internet connection for the
@@ -31,11 +34,9 @@ The map fills the screen with the polygon grid. Registration and loading errors
 are reported in the Xcode console.
 
 The Xcode project compiles `Ngon/shared/cpp/ngon_layer.cpp` directly into the app
-and links the `MapLibreWithPlugins` package product. `App/main.mm` calls
+and links the `MapLibre` and `MapLibrePluginApi` package products. `App/main.mm` calls
 `mln_ngon_layer_register(&mln_plugin_register_v1, ...)` before creating a map.
-The small `Support/mln/plugin/plugin_api.h` shim forwards the original plugin
-include path to the XCFramework's public header. No MapLibre core source or
-private headers are used to build the app.
+No MapLibre core source or private headers are used to build the app.
 
 ## Verify end to end
 
@@ -63,17 +64,17 @@ node Ngon/scripts/generate-shaders.mjs --output Ngon/generated/ngon_shader_sourc
 ```
 
 The Xcode project is checked in. To regenerate it, install the `xcodeproj` Ruby
-gem and run `ruby scripts/generate-project.rb`.
+gem and run `ruby scripts/generate-project.rb`. Set `MAPLIBRE_IOS_PACKAGE_PATH` to a
+local checkout of the package to test an unreleased XCFramework; regenerate without it before committing.
 
 ## Validation status
 
 Verified with Xcode 27.0 (27A266a), the iOS 27.0 SDK, and an iPhone 17 Pro
 simulator running iOS 26.4:
 
-- Resolved the published `MapLibreWithPlugins` product at
-  [`7.0.0-pre0`](https://github.com/maplibre/maplibre-gl-native-distribution/releases/tag/7.0.0-pre0)
+- Resolved the published `MapLibre` and `MapLibrePluginApi` products at
+  [`7.0.0-pre1`](https://github.com/louwers/maplibre-ios-with-plugin-api/releases/tag/7.0.0-pre1)
   through Swift Package Manager using a fresh build directory.
-- Built the app for the simulator and an iOS device (Release, without signing).
 - Passed `testPluginRendersNativeExampleStyle`: visible pixels from all eight
   polygon colors using the native example style.
 

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F2059B9D4DE45D2543B02CA5"
+               BlueprintIdentifier = "D0E151A18AFE613C83EF5CA2"
                BuildableName = "NgonExample.app"
                BlueprintName = "NgonExample"
                ReferencedContainer = "container:NgonExample.xcodeproj">
@@ -30,7 +30,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F2059B9D4DE45D2543B02CA5"
+            BlueprintIdentifier = "D0E151A18AFE613C83EF5CA2"
             BuildableName = "NgonExample.app"
             BlueprintName = "NgonExample"
             ReferencedContainer = "container:NgonExample.xcodeproj">
@@ -41,7 +41,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A8393E4971340614EF2C2300"
+               BlueprintIdentifier = "41833D465C25ABCC180B8792"
                BuildableName = "NgonExampleTests.xctest"
                BlueprintName = "NgonExampleTests"
                ReferencedContainer = "container:NgonExample.xcodeproj">
@@ -63,7 +63,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F2059B9D4DE45D2543B02CA5"
+            BlueprintIdentifier = "D0E151A18AFE613C83EF5CA2"
             BuildableName = "NgonExample.app"
             BlueprintName = "NgonExample"
             ReferencedContainer = "container:NgonExample.xcodeproj">
@@ -80,7 +80,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F2059B9D4DE45D2543B02CA5"
+            BlueprintIdentifier = "D0E151A18AFE613C83EF5CA2"
             BuildableName = "NgonExample.app"
             BlueprintName = "NgonExample"
             ReferencedContainer = "container:NgonExample.xcodeproj">
